@@ -1,20 +1,23 @@
 const path = require('path');
 
 module.exports = {
+  entry: './src/main.ts',
   module: {
     rules: [
-        {
-        test: /\.js$/,
+      {
+        test: /\.ts$/,
+        use: { loader:'ts-loader' },
         exclude: /node_modules/,
-        use: { loader: 'babel-loader' }
-        }
+      },
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js' ],
   },
   watchOptions: {
     ignored: /node_modules/
   },
   target: 'node',
-  entry: './src/main.js',
   output: {
     libraryTarget: 'commonjs2',
     filename: 'main.js',
