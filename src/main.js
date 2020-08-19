@@ -1,0 +1,1 @@
+/home/pablo/.config/Screeps/scripts/localhost___21025/default/main.js
